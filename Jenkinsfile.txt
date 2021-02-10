@@ -1,12 +1,14 @@
-pipeline {
-    agent any
-    stages {
-stage('testing pipeline'){
-          steps{
-      echo 'test1'
-                sh 'mkdir from-jenkins'
-                sh 'touch from-jenkins/test.txt'
-                }
-        }
-}
+node {
+    stage('Generate HTML report') {
+        cucumber buildStatus: 'UNSTABLE',
+                reportTitle: 'My report',
+                fileIncludePattern: '**/*.json',
+                trendsLimit: 10,
+                classifications: [
+                    [
+                        'key': 'Browser',
+                        'value': 'Chrome'
+                    ]
+                ]
+    }
 }
