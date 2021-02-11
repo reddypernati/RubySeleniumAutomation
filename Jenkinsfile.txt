@@ -5,7 +5,7 @@ pipeline {
   environment {
     //Project Configurations
     solutionName="ruby-cucumber"
-    reportUrl = http://localhost:8080
+    reportUrl = http://localhost:8080/
 
 
 
