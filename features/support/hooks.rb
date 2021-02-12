@@ -12,7 +12,7 @@ log "The Page Title is: #{$driver.title}"
 
 end
 After do # |scenario|
-  $driver.quit
+$driver.quit
 end
 #require 'selenium-webdriver'
 #

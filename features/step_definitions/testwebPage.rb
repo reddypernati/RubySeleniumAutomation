@@ -15,6 +15,8 @@ Then(/^input textfield, radio button, check boxes, link, dropdown-list and butto
     $driver.find_element(:id, 'textfield1').send_keys 'Testing Web Page'
     # log $driver.find_element(:id, 'textfield1').text.include?('Testing Web Page').text
     log "Testing Web Page...is entered in the textfield text box"
+  else 
+    log "Textfield text box is not displayed"
   end
 
   # Checking and selecting the radio button "B"
